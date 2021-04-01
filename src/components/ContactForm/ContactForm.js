@@ -40,6 +40,7 @@ class ContactForm extends Component {
                         type='text'
                         placeholder='Name'
                         onChange={this.handleInputChange}
+                        pattern='[a-zA-Z \u0400-\u04ff]{3,30}'
                     />
                 </label>
                 <label>
@@ -48,8 +49,10 @@ class ContactForm extends Component {
                         name='number'
                         value={number}
                         type='tel'
-                        placeholder='Phone number'
+                        placeholder='Number'
                         onChange={this.handleInputChange}
+                        pattern='\d{3}[\s.-]?\d{2}[\s.-]?\d{2}$'
+                        title='Please, use the following format: 111-11-11'
                     />
                 </label>
                 <button type='submit' className={styles.button}>Add contact</button>
