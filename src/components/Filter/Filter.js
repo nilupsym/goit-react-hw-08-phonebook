@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Actions from '../../redux/actions';
+import * as actions from '../../redux/actions';
 
 const Filter = ({ value, onChange }) => (
     <label>
@@ -17,6 +17,6 @@ Filter.propTypes = {
 
 const mapStateToProps = (state) => ({ value: state.filter });
 
-const mapDispatchToProps = dispatch => ({ onChange: (e) => dispatch(Actions.changeFilter(e.target.value)) });
+const mapDispatchToProps = dispatch => ({ onChange: (e) => dispatch(actions.changeFilter(e.target.value)) });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Filter);
