@@ -12,7 +12,7 @@ const ContactListItem = ({ id, name, number, handleDeleteContact }) => (
   </li>);
 
 ContactListItem.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
   handleDeleteContact: PropTypes.func.isRequired,

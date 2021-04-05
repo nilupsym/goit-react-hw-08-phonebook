@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from '../../redux/actions';
+import selectors from '../../redux/selectors';
 
 const Filter = ({ value, onChange }) => (
     <label>
@@ -15,7 +16,7 @@ Filter.propTypes = {
     onChange: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state) => ({ value: state.filter });
+const mapStateToProps = (state) => ({ value: selectors.getFilter(state), });
 
 const mapDispatchToProps = dispatch => ({ onChange: (e) => dispatch(actions.changeFilter(e.target.value)) });
 

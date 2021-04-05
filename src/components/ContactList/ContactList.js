@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import operations from '../../redux/operations';
+import selectors from '../../redux/selectors';
 import styles from './ContactList.module.css';
 import ContactListItem from '../ContactListItem';
 
@@ -22,7 +23,7 @@ const ContactList = ({filteredContacts, handleDeleteContact}) => (
 ContactList.propTypes = {
     filteredContacts: PropTypes.arrayOf(
         PropTypes.shape({
-            id: PropTypes.string,
+            id: PropTypes.number,
             name: PropTypes.string,
             number: PropTypes.string
         })
@@ -30,16 +31,16 @@ ContactList.propTypes = {
     handleDeleteContact: PropTypes.func.isRequired,
 };
 
-const getFilteredContacts = (allContacts, filter) => {
-  const normalizedFilter = filter.toLowerCase();
+// const getFilteredContacts = (allContacts, filter) => {
+//   const normalizedFilter = filter.toLowerCase();
 
-  return allContacts.filter(contact =>
-    contact.name.toLowerCase().includes(normalizedFilter),
-  );
-};
+//   return allContacts.filter(contact =>
+//     contact.name.toLowerCase().includes(normalizedFilter),
+//   );
+// };
 
-const mapStateToProps = ({ contacts: { items, filter } }) => ({
-  filteredContacts: getFilteredContacts(items, filter),
+const mapStateToProps = (state) => ({
+  filteredContacts: selectors.getFilteredContacts(state),
 });
 
 const mapDispatchToProps = dispatch => ({
