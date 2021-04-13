@@ -9,6 +9,8 @@ import Container from './components/Container/Container';
 import authOperations from './redux/auth/auth-operations';
 import { connect } from 'react-redux';
 import PrivateRoute from './components/PrivateRoute';
+import PublicRoute from './components/PublicRoute';
+
 
 class App extends Component {
   componentDidMount() {
@@ -21,9 +23,9 @@ class App extends Component {
         <AppBar />
         
         <Switch>
-          <Route exact path="/" component={HomeView} />
-          <Route path="/register" component={RegisterView} />
-          <Route path="/login" component={LoginView} />
+          <PublicRoute exact path="/" component={HomeView} />
+          <PublicRoute path="/register" restricted component={RegisterView} redirectTo="/contacts" />
+          <PublicRoute path="/login" restricted component={LoginView} redirectTo="/contacts" />
           <PrivateRoute path="/contacts" component={ContactsView} redirectTo="/login" />
         </Switch>
       </Container>
