@@ -8,12 +8,13 @@ import LoginView from './views/LoginView';
 import Container from './components/Container/Container';
 import authOperations from './redux/auth/auth-operations';
 import { connect } from 'react-redux';
+import PrivateRoute from './components/PrivateRoute';
 
 class App extends Component {
   componentDidMount() {
     this.props.onGetCurrentUser();
   }
-  
+
   render() {
     return (
       <Container>
@@ -23,7 +24,7 @@ class App extends Component {
           <Route exact path="/" component={HomeView} />
           <Route path="/register" component={RegisterView} />
           <Route path="/login" component={LoginView} />
-          <Route path="/contacts" component={ContactsView} />
+          <PrivateRoute path="/contacts" component={ContactsView} redirectTo="/login" />
         </Switch>
       </Container>
     )
