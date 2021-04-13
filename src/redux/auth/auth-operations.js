@@ -30,7 +30,7 @@ const logIn = credentials => async dispatch => {
     dispatch(authActions.loginRequest());
 
     try {
-        const response = await axios.post('users/login', credentials);
+        const response = await axios.post('/users/login', credentials);
         
         token.set(response.data.token);
         dispatch(authActions.loginSuccess(response.data));
@@ -44,7 +44,7 @@ const logOut = () => async dispatch => {
 dispatch(authActions.logoutRequest());
 
     try {
-        await axios.post('users/logout');
+        await axios.post('/users/logout');
 
         token.unset();
         dispatch(authActions.logoutSuccess());
@@ -54,4 +54,27 @@ dispatch(authActions.logoutRequest());
     }
 };
 
-export default { register, logIn, logOut, };
+const getCurrentUser = () => async (dispatch, getState) => {
+    const {
+        auth: { token: persistedToken }
+    } = getState();
+
+    if (!persistedToken) {
+        return;
+    }
+
+    token.set(persistedToken);
+
+    dispatch(authActions.getCurrentUserRequest());
+
+    try {
+        const response = await axios.get('/users/current');
+        
+        dispatch(authActions.getCurrentUserSuccess(response.data));
+    }
+    catch (error) {
+        dispatch(authActions.getCurrentUserError(error.message));
+    }
+};
+
+export default { register, logIn, logOut, getCurrentUser };
