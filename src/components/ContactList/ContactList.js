@@ -23,7 +23,7 @@ const ContactList = ({filteredContacts, handleDeleteContact}) => (
 ContactList.propTypes = {
     filteredContacts: PropTypes.arrayOf(
         PropTypes.shape({
-            id: PropTypes.number,
+            id: PropTypes.string,
             name: PropTypes.string,
             number: PropTypes.string
         })

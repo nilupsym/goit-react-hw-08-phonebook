@@ -24,5 +24,5 @@ const getFilteredContacts = createSelector(
     contact.name.toLowerCase().includes(normalizedFilter),
   );
 });
-
+// eslint-disable-next-line
 export default { getFilter, getFilteredContacts, };
