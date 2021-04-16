@@ -8,23 +8,23 @@
     "login-page.js": "/goit-react-hw-08-phonebook/static/js/login-page.e8c71d27.chunk.js",
     "login-page.js.map": "/goit-react-hw-08-phonebook/static/js/login-page.e8c71d27.chunk.js.map",
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.5e04e260.chunk.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.9e425075.chunk.js",
-    "main.js.map": "/goit-react-hw-08-phonebook/static/js/main.9e425075.chunk.js.map",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.850e716f.chunk.js",
+    "main.js.map": "/goit-react-hw-08-phonebook/static/js/main.850e716f.chunk.js.map",
     "register-page.js": "/goit-react-hw-08-phonebook/static/js/register-page.6ef72a15.chunk.js",
     "register-page.js.map": "/goit-react-hw-08-phonebook/static/js/register-page.6ef72a15.chunk.js.map",
     "runtime-main.js": "/goit-react-hw-08-phonebook/static/js/runtime-main.612c7d7a.js",
     "runtime-main.js.map": "/goit-react-hw-08-phonebook/static/js/runtime-main.612c7d7a.js.map",
-    "static/js/6.7c092492.chunk.js": "/goit-react-hw-08-phonebook/static/js/6.7c092492.chunk.js",
-    "static/js/6.7c092492.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/6.7c092492.chunk.js.map",
+    "static/js/6.36fd0adf.chunk.js": "/goit-react-hw-08-phonebook/static/js/6.36fd0adf.chunk.js",
+    "static/js/6.36fd0adf.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/6.36fd0adf.chunk.js.map",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "static/css/contacts-page.303c881a.chunk.css.map": "/goit-react-hw-08-phonebook/static/css/contacts-page.303c881a.chunk.css.map",
     "static/css/main.5e04e260.chunk.css.map": "/goit-react-hw-08-phonebook/static/css/main.5e04e260.chunk.css.map",
-    "static/js/6.7c092492.chunk.js.LICENSE.txt": "/goit-react-hw-08-phonebook/static/js/6.7c092492.chunk.js.LICENSE.txt"
+    "static/js/6.36fd0adf.chunk.js.LICENSE.txt": "/goit-react-hw-08-phonebook/static/js/6.36fd0adf.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.612c7d7a.js",
-    "static/js/6.7c092492.chunk.js",
+    "static/js/6.36fd0adf.chunk.js",
     "static/css/main.5e04e260.chunk.css",
-    "static/js/main.9e425075.chunk.js"
+    "static/js/main.850e716f.chunk.js"
   ]
 }
