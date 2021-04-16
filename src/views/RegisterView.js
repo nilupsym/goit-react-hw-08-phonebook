@@ -11,6 +11,22 @@ const styles = {
     flexDirection: 'column',
     marginBottom: 15,
   },
+  button: {
+    marginTop: '20px',
+    padding: '10px',
+    textAlign: 'left',
+    width: 'fit-content',
+    backgroundColor: 'rgb(199, 239, 245)',
+    border: 'none',
+    borderRadius: '4px',
+    outline: 'none',
+    transition: 'background-color 250ms ease-in-out',
+  },
+  '& hover': {
+    cursor: 'pointer',
+    backgroundColor: 'rgb(88, 188, 211)',
+    color: '#fff',
+    },
 };
 
 class RegisterView extends Component {
@@ -74,7 +90,7 @@ class RegisterView extends Component {
             />
           </label>
 
-          <button type="submit">Register</button>
+          <button style={styles.button} type="submit">Register</button>
         </form>
       </div>
     );
